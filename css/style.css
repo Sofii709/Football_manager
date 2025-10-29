@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.main_container {
+    background-image: radial-gradient(circle at center, #34619d 0%, #34619d 1%, #1d3b6e 100%);
+}
+
+.navigation {
+    background-color: rgba(172, 172, 170, 0.3);
+}
+
+.bottom_container {
+    background-color: #f4d633;
+}
