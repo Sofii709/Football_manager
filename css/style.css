@@ -4,7 +4,32 @@
 }
 
 .wrapper {
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+body {
+    font-family: "Arial";
+}
+
+h1,
+a,
+p {
+    color: #fff;
+}
+
+h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    padding: 19px 0;
 }
 
 .main_container {
@@ -12,9 +37,56 @@
 }
 
 .navigation {
+    border-radius: 20px;
+    max-width: 438px;
     background-color: rgba(172, 172, 170, 0.3);
+}
+
+.menu a {
+    display: inline-block;
+    padding: 15px 0;
+    font-size: 14px;
+    line-height: 2.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.contacts a {
+    font-size: 16px;
+    line-height: 3.1em;
+}
+
+.main_text {
+    max-width: 692px;
+}
+
+.slogan {
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 22px 42px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f4d633;
+    font-weight: bold;
+    border-radius: 35px;
+    background-color: transparent;
+    border: 3px solid #f4d633;
+}
+
+.rating_container {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .bottom_container {
     background-color: #f4d633;
+}
+
+.graphick p {
+    color: #1e3c6f;
+    font-weight: bold;
 }
