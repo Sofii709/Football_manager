@@ -19,6 +19,7 @@ p {
 }
 
 h1 {
+    max-width: 690px;
     font-size: 48px;
     text-transform: uppercase;
     font-weight: 800;
@@ -75,8 +76,15 @@ a {
     line-height: 3.1em;
 }
 
+.main {
+    position: relative;
+    padding: 130px 0;
+}
+
 .main_text {
-    max-width: 692px;
+    position: relative;
+    min-width: 70vw;
+    z-index: 2;
 }
 
 .slogan {
@@ -103,6 +111,12 @@ a {
 .rating_container {
     font-size: 20px;
     font-weight: bold;
+}
+
+.ball_container {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
 }
 
 .bottom_container {
