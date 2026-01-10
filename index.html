@@ -3,16 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes, maximum-scale=2.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 user-scalable=yes, maximum-scale=2.0, minimum-scale=1.0">
     <title>Football manager official site</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div id="black_bg"></div>
     <div class="main_container">
         <div class="wrapper">
             <header>
-                <div class="header flex-between items-center">
+                <div class="header wrap items-center">
                     <div class="logo">
                         <a href="index.html">
                             <picture>
@@ -22,7 +24,8 @@
                         </a>
                     </div>
                     <nav class="navigation">
-                        <ul class="menu flex-between">
+                        <ul id="menu" class="menu">
+                            <li id="cancel"><a href="">X</a></li>
                             <li><a href="#">Про нас</a></li>
                             <li><a href="#">Контакти</a></li>
                             <li><a href="#">Івенти</a></li>
@@ -34,6 +37,9 @@
                             <img src="img/phone.svg" alt="phone">
                             +38 050 505 50 55
                         </a>
+                    </div>
+                    <div id="burger_container">
+                        <span id="burger"></span>
                     </div>
                 </div>
             </header>
@@ -65,7 +71,7 @@
     </div>
     <footer>
         <div class="bottom_container footer">
-            <div class="wrapper flex-between items-center">
+            <div class="bottom wrapper wrap gap flex-between items-center">
                 <div class="graphick">
                     <p>Пн-Пт: 8-20:00</p>
                     <p>Сб-Нд: 10-19:00</p>
@@ -83,12 +89,13 @@
                             <source src="img/logo_bottom.webp" type="image/webp">
                             <img src="img/bottom_logo.png" alt="bottom_logo">
                         </picture>
+                        <p>sinse 2025</p>
                     </a>
                 </div>
             </div>
-            <p class="wrapper">sinse 2025</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

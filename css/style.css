@@ -4,12 +4,25 @@
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0px 10px;
+}
+
+html {
+    font-size: 0.7px;
 }
 
 body {
     font-family: "Arial";
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap {
+    gap: 10px;
 }
 
 h1,
@@ -33,8 +46,22 @@ a {
     text-decoration: none;
 }
 
+#black_bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
 .header {
+    position: relative;
     padding: 19px 0;
+    display: flex;
 }
 
 .flex-between {
@@ -62,6 +89,10 @@ a {
     background-color: rgba(172, 172, 170, 0.3);
 }
 
+.logo {
+    z-index: 2;
+}
+
 .menu a {
     display: inline-block;
     padding: 6px 0;
@@ -71,9 +102,80 @@ a {
     font-weight: bold;
 }
 
+.navigation {
+    z-index: 2;
+}
+
+.contacts {
+    z-index: 1;
+}
+
 .contacts a {
     font-size: 16px;
     line-height: 3.1em;
+}
+
+#menu {
+    position: fixed;
+    width: 60vw;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    background-color: gray;
+    z-index: 3;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+#cancel {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#burger,
+#burger:before,
+#burger:after {
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+}
+
+#burger_container {
+    order: -1;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    right: 0px;
+
+}
+
+#burger {
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: #fff;
+    transform: translateY(150%);
+}
+
+#burger:before,
+#burger:after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+#burger:before {
+    top: -10px;
+}
+
+#burger:after {
+    bottom: -10px
 }
 
 .main {
@@ -81,14 +183,22 @@ a {
     padding: 130px 0;
 }
 
+.main_text i {
+    font-size: 16px;
+}
+
+.main_text h1 {
+    font-size: 25px;
+}
+
 .main_text {
     position: relative;
     min-width: 70vw;
-    z-index: 2;
+    z-index: 1;
 }
 
 .slogan {
-    font-size: 30px;
+    font-size: 18px;
     padding-bottom: 25px;
 }
 
@@ -99,7 +209,7 @@ a {
 .cta {
     display: inline-block;
     padding: 22px 42px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     color: #f4d633;
     font-weight: bold;
@@ -114,6 +224,7 @@ a {
 }
 
 .ball_container {
+    z-index: 0;
     position: absolute;
     bottom: -10px;
     right: 0;
@@ -124,6 +235,8 @@ a {
 }
 
 .graphick p {
+    font-size: 16px;
+    line-height: 1em;
     color: #1e3c6f;
     font-weight: bold;
 }
@@ -132,8 +245,87 @@ a {
     padding: 14px 0;
 }
 
+.bottom {
+    flex-direction: column;
+}
+
 .footer>p {
     font-size: 12px;
     color: #204075;
     text-align: right;
+}
+
+.bottom_logo p {
+    font-size: 12px;
+    color: #204075;
+    text-align: right;
+}
+
+@media screen and (min-width: 465px) {
+    .menu {
+        flex-direction: row;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bottom {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .menu {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 0.9px;
+    }
+
+    .main_text h1 {
+        font-size: 47px;
+    }
+
+    .slogan {
+        font-size: 30px;
+    }
+
+    .cta {
+        font-size: 18px;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #cancel {
+        display: none;
+    }
+
+    #menu {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 438px;
+        position: static;
+        display: flex;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@media screen and (min-width:1440px) {
+    html {
+        font-size: 1px;
+    }
+}
+
+@media screen and (min-width:1920px) {
+    html {
+        font-size: 1.4px;
+    }
 }
