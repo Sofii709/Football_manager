@@ -46,8 +46,7 @@ a {
     text-decoration: none;
 }
 
-#black_bg {
-    display: none;
+#bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,6 +55,17 @@ a {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(4px);
     z-index: 2;
+}
+
+#black_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 1;
 }
 
 .header {
@@ -90,7 +100,7 @@ a {
 }
 
 .logo {
-    z-index: 2;
+    z-index: 1;
 }
 
 .menu a {
@@ -100,6 +110,11 @@ a {
     line-height: 2.1em;
     text-transform: uppercase;
     font-weight: bold;
+    transition: all 1s ease;
+}
+
+.menu a:hover {
+    color: #f4d633;
 }
 
 .navigation {
@@ -113,10 +128,16 @@ a {
 .contacts a {
     font-size: 16px;
     line-height: 3.1em;
+    transition: all 1s ease;
+}
+
+.contacts a:hover {
+    color: #f4d633;
 }
 
 #menu {
     position: fixed;
+    padding: 0 0 0 10px;
     width: 60vw;
     height: 100vh;
     top: 0;
@@ -188,7 +209,7 @@ a {
 }
 
 .main_text h1 {
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .main_text {
@@ -208,7 +229,7 @@ a {
 
 .cta {
     display: inline-block;
-    padding: 22px 42px;
+    padding: 11px 21px;
     font-size: 16px;
     text-transform: uppercase;
     color: #f4d633;
@@ -216,10 +237,17 @@ a {
     border-radius: 35px;
     background-color: transparent;
     border: 3px solid #f4d633;
+    transition: all 1s ease;
+}
+
+.cta:hover {
+    background-color: #f4d633;
+    color: #204075;
+    border: 3px solid #1e3c6f;
 }
 
 .rating_container {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -239,6 +267,11 @@ a {
     line-height: 1em;
     color: #1e3c6f;
     font-weight: bold;
+}
+
+footer {
+    position: relative;
+    z-index: 2;
 }
 
 .footer {
@@ -274,6 +307,14 @@ a {
     .bottom {
         flex-direction: row;
     }
+
+    .cta {
+        padding: 22px 42px;
+    }
+
+    .rating_container {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -297,6 +338,10 @@ a {
 
     .cta {
         font-size: 18px;
+    }
+
+    #black_bg {
+        z-index: -1;
     }
 
     #burger {
