@@ -15,6 +15,7 @@ html {
 
 body {
     font-family: "Arial";
+    min-height: 100vh;
 }
 
 .wrap {
@@ -127,6 +128,7 @@ a {
 }
 
 .contacts a {
+    padding-top: 15px;
     font-size: 16px;
     line-height: 3.1em;
     transition: all 1s ease;
@@ -138,7 +140,7 @@ a {
 
 #menu {
     position: fixed;
-    padding: 0 0 0 10px;
+    padding: 15px 0 0 15px;
     width: 60vw;
     height: 100vh;
     top: 0;
@@ -154,7 +156,7 @@ a {
 
 #cancel {
     position: absolute;
-    top: 15px;
+    top: 0px;
     right: 15px;
 }
 
@@ -272,7 +274,7 @@ a {
 
 footer {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .footer {
@@ -340,7 +342,9 @@ footer {
     .cta {
         font-size: 18px;
     }
+}
 
+@media screen and (min-width: 1024px) {
     #black_bg {
         z-index: -1;
     }
@@ -354,6 +358,7 @@ footer {
     }
 
     #menu {
+        padding: 0px 0 0 15px;
         flex-direction: row;
         justify-content: space-between;
         max-width: 438px;
@@ -361,6 +366,10 @@ footer {
         display: flex;
         height: auto;
         background-color: rgba(0, 0, 0, 0);
+    }
+
+    .contacts a {
+        padding-top: 0px;
     }
 }
 
