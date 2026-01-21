@@ -128,7 +128,6 @@ a {
 }
 
 .contacts a {
-    padding-top: 15px;
     font-size: 16px;
     line-height: 3.1em;
     transition: all 1s ease;
@@ -170,6 +169,7 @@ a {
 
 #burger_container {
     order: -1;
+    padding-bottom: 15px;
     display: flex;
     justify-content: end;
     width: 100%;
@@ -204,7 +204,7 @@ a {
 
 .main {
     position: relative;
-    padding: 130px 0;
+    padding: 65px 0;
 }
 
 .main_text i {
@@ -213,6 +213,7 @@ a {
 
 .main_text h1 {
     font-size: 28px;
+    padding: 20px 0 25px;
 }
 
 .main_text {
@@ -331,8 +332,13 @@ footer {
         font-size: 0.9px;
     }
 
+    .main {
+        padding: 130px 0;
+    }
+
     .main_text h1 {
         font-size: 47px;
+        padding: 0;
     }
 
     .slogan {
@@ -366,10 +372,6 @@ footer {
         display: flex;
         height: auto;
         background-color: rgba(0, 0, 0, 0);
-    }
-
-    .contacts a {
-        padding-top: 0px;
     }
 }
 
